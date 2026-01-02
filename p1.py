@@ -37,7 +37,7 @@ def gradient(w, data):
     for house in data:
         local, area, real_price = house
         predicted = predict_price(local, area, w)
-        grad_sum += area*(predicted-real_price)/local
+        grad_sum += area*(predicted-real_price)
         return grad_sum / len(data)
 
 
